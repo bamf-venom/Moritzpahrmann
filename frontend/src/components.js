@@ -148,15 +148,32 @@ export const LatestProjectSection = () => {
           className="relative max-w-4xl mx-auto"
         >
           <div 
-            className="relative bg-gray-600 aspect-video rounded-lg overflow-hidden cursor-pointer border-2 border-gray-500"
+            className="relative bg-black aspect-video rounded-lg overflow-hidden cursor-pointer border border-green-500/30"
             onMouseEnter={() => setIsVideoHovered(true)}
             onMouseLeave={() => setIsVideoHovered(false)}
           >
-            {/* Video Placeholder */}
-            <div className="w-full h-full bg-gray-600 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-32 h-32 bg-gray-500 rounded-lg mx-auto mb-4"></div>
-                <p className="text-white/60">Green Robot/Mech Video</p>
+            {/* Video Placeholder - Green Robot/Mech */}
+            <div className="w-full h-full bg-black flex items-center justify-center relative">
+              {/* Robot silhouette */}
+              <div className="relative">
+                {/* Robot body */}
+                <div className="w-32 h-40 bg-green-600 rounded-lg relative mx-auto">
+                  {/* Robot head */}
+                  <div className="w-20 h-16 bg-green-500 rounded-lg absolute -top-4 left-1/2 transform -translate-x-1/2"></div>
+                  {/* Robot eyes */}
+                  <div className="absolute top-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                    <div className="w-2 h-2 bg-green-300 rounded-full"></div>
+                    <div className="w-2 h-2 bg-green-300 rounded-full"></div>
+                  </div>
+                  {/* Robot arms */}
+                  <div className="w-6 h-24 bg-green-700 rounded absolute top-4 -left-8"></div>
+                  <div className="w-6 h-24 bg-green-700 rounded absolute top-4 -right-8"></div>
+                  {/* Robot legs */}
+                  <div className="w-8 h-16 bg-green-800 rounded absolute -bottom-16 left-2"></div>
+                  <div className="w-8 h-16 bg-green-800 rounded absolute -bottom-16 right-2"></div>
+                  {/* Chest details */}
+                  <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-8 h-8 border-2 border-green-400 rounded"></div>
+                </div>
               </div>
             </div>
             
