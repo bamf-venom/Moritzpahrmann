@@ -33,13 +33,26 @@ export const Header = () => {
 export const HeroSection = () => {
   return (
     <section className="relative h-screen overflow-hidden">
-      {/* Background Image Placeholder */}
-      <div className="absolute inset-0 bg-gradient-to-br from-amber-900/50 via-orange-800/30 to-brown-900/40">
-        <div className="w-full h-full bg-gray-600"></div>
+      {/* Background Image Placeholder - Bedroom Scene */}
+      <div className="absolute inset-0">
+        <div className="w-full h-full bg-gradient-to-br from-amber-800 via-orange-700 to-amber-900 relative">
+          {/* Bedroom elements to simulate the original */}
+          <div className="absolute inset-0 opacity-60">
+            {/* Wall pattern */}
+            <div className="absolute top-0 right-0 w-1/3 h-full bg-gradient-to-b from-amber-600 to-amber-800"></div>
+            {/* Bed area */}
+            <div className="absolute bottom-0 left-1/4 right-1/4 h-1/3 bg-gradient-to-t from-amber-900 via-orange-800 to-amber-700 rounded-t-3xl"></div>
+            {/* Side furniture */}
+            <div className="absolute bottom-16 left-16 w-24 h-32 bg-amber-900 rounded"></div>
+            <div className="absolute bottom-32 left-12 w-8 h-16 bg-amber-800 rounded"></div>
+            {/* Lighting effect */}
+            <div className="absolute top-1/4 right-1/4 w-32 h-32 bg-yellow-400 opacity-20 rounded-full blur-3xl"></div>
+          </div>
+        </div>
       </div>
       
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/30"></div>
+      <div className="absolute inset-0 bg-black/40"></div>
       
       {/* Content */}
       <div className="relative z-10 flex items-center justify-start h-full max-w-7xl mx-auto px-6">
