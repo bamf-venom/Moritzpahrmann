@@ -215,10 +215,19 @@ export const PastProjectsSection = () => {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 1 }}
-        className="relative bg-gradient-to-br from-yellow-600 via-orange-500 to-amber-700 min-h-screen flex items-center justify-center"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
-        {/* Background Placeholder */}
-        <div className="absolute inset-0 bg-gray-500"></div>
+        {/* Desert Background Placeholder */}
+        <div className="absolute inset-0 bg-gradient-to-b from-yellow-600 via-orange-500 to-amber-700">
+          {/* Desert dunes simulation */}
+          <div className="absolute bottom-0 left-0 w-full h-1/2">
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-amber-800 to-orange-600 rounded-t-full transform rotate-1"></div>
+            <div className="absolute bottom-0 right-0 w-2/3 h-24 bg-gradient-to-t from-yellow-700 to-yellow-500 rounded-t-full transform -rotate-2"></div>
+            <div className="absolute bottom-0 left-1/4 w-1/2 h-20 bg-gradient-to-t from-orange-700 to-orange-500 rounded-t-full"></div>
+          </div>
+          {/* Sky gradient */}
+          <div className="absolute top-0 left-0 w-full h-1/2 bg-gradient-to-b from-yellow-300 via-orange-400 to-transparent"></div>
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
         
         {/* Content */}
