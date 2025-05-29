@@ -458,12 +458,28 @@ export const Footer = () => {
         </p>
         
         <div className="flex space-x-6">
-          <a href="#datenschutz" className="text-white/60 hover:text-white text-sm transition-colors">
+          <button 
+            onClick={() => {
+              const element = document.getElementById('data-protection');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
+          >
             Datenschutz
-          </a>
-          <a href="#legal" className="text-white/60 hover:text-white text-sm transition-colors">
+          </button>
+          <button 
+            onClick={() => {
+              const element = document.getElementById('legal');
+              if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+              }
+            }}
+            className="text-white/60 hover:text-white text-sm transition-colors cursor-pointer"
+          >
             Legal Info
-          </a>
+          </button>
         </div>
       </div>
     </motion.footer>
