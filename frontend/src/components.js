@@ -260,7 +260,19 @@ export const PastProjectsSection = () => {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="relative"
           >
-            <div className="w-24 h-32 bg-gray-400 rounded-lg mx-auto"></div>
+            <div className="relative mx-auto">
+              {/* Character body */}
+              <div className="w-16 h-24 bg-blue-800 rounded-lg mx-auto relative">
+                {/* Character head */}
+                <div className="w-12 h-12 bg-blue-700 rounded-full absolute -top-3 left-1/2 transform -translate-x-1/2"></div>
+                {/* Character arms */}
+                <div className="w-3 h-12 bg-blue-900 rounded absolute top-2 -left-4"></div>
+                <div className="w-3 h-12 bg-blue-900 rounded absolute top-2 -right-4"></div>
+                {/* Character legs */}
+                <div className="w-4 h-8 bg-blue-900 rounded absolute -bottom-8 left-2"></div>
+                <div className="w-4 h-8 bg-blue-900 rounded absolute -bottom-8 right-2"></div>
+              </div>
+            </div>
           </motion.div>
         </div>
         
