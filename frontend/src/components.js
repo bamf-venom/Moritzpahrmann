@@ -48,7 +48,7 @@ export const Header = () => {
 // Hero Section Component
 export const HeroSection = () => {
   return (
-    <section className="relative h-screen overflow-hidden">
+    <section id="hero" className="relative h-screen overflow-hidden">
       {/* Background Image Placeholder - Bedroom Scene */}
       <div className="absolute inset-0">
         <div className="w-full h-full bg-gradient-to-br from-amber-800 via-orange-700 to-amber-900 relative">
