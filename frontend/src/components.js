@@ -14,11 +14,20 @@ export const Header = () => {
         <div className="text-2xl font-bold text-white">MBP</div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#about" className="text-white/80 hover:text-white transition-colors">About me</a>
-          <a href="#contact" className="text-white/80 hover:text-white transition-colors">Contact</a>
-          <a href="#data" className="text-white/80 hover:text-white transition-colors">data protection</a>
-          <a href="#legal" className="text-white/80 hover:text-white transition-colors">Legal Info</a>
+          <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300">About me</a>
+          <a href="#contact" className="text-white/80 hover:text-white transition-colors duration-300">Contact</a>
+          <a href="#data" className="text-white/80 hover:text-white transition-colors duration-300">data protection</a>
+          <a href="#legal" className="text-white/80 hover:text-white transition-colors duration-300">Legal Info</a>
         </nav>
+        
+        {/* Mobile menu button */}
+        <div className="md:hidden">
+          <button className="text-white">
+            <div className="w-6 h-0.5 bg-white mb-1"></div>
+            <div className="w-6 h-0.5 bg-white mb-1"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
+          </button>
+        </div>
         
         <div className="flex space-x-4">
           <div className="w-6 h-6 bg-gray-400 rounded"></div>
