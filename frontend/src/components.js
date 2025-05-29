@@ -327,7 +327,13 @@ export const PastProjectsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.8 }}
           whileHover={{ scale: 1.05 }}
-          className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded hover:bg-white/20 transition-all duration-300"
+          onClick={() => {
+            const element = document.getElementById('all-videos');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}
+          className="absolute bottom-16 left-1/2 transform -translate-x-1/2 bg-white/10 backdrop-blur-sm border border-white/30 text-white px-6 py-3 rounded hover:bg-white/20 transition-all duration-300 cursor-pointer"
         >
           All Videos →
         </motion.button>
