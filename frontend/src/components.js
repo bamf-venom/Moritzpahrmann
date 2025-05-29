@@ -3,6 +3,13 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // Header Component
 export const Header = () => {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.header 
       initial={{ opacity: 0, y: -20 }}
@@ -11,13 +18,13 @@ export const Header = () => {
       className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-white/10"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-white">MBP</div>
+        <div className="text-2xl font-bold text-white cursor-pointer" onClick={() => scrollToSection('hero')}>MBP</div>
         
         <nav className="hidden md:flex space-x-8">
-          <a href="#about" className="text-white/80 hover:text-white transition-colors duration-300">About me</a>
-          <a href="#contact" className="text-white/80 hover:text-white transition-colors duration-300">Contact</a>
-          <a href="#data" className="text-white/80 hover:text-white transition-colors duration-300">data protection</a>
-          <a href="#legal" className="text-white/80 hover:text-white transition-colors duration-300">Legal Info</a>
+          <button onClick={() => scrollToSection('about')} className="text-white/80 hover:text-white transition-colors duration-300">About me</button>
+          <button onClick={() => scrollToSection('contact')} className="text-white/80 hover:text-white transition-colors duration-300">Contact</button>
+          <button onClick={() => scrollToSection('data-protection')} className="text-white/80 hover:text-white transition-colors duration-300">data protection</button>
+          <button onClick={() => scrollToSection('legal')} className="text-white/80 hover:text-white transition-colors duration-300">Legal Info</button>
         </nav>
         
         {/* Mobile menu button */}
