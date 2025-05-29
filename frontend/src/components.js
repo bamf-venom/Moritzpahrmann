@@ -97,6 +97,8 @@ export const HeroSection = () => {
 
 // My Story Section Component
 export const MyStorySection = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
     <section className="flex flex-col md:flex-row min-h-screen">
       {/* Left Side - White Background */}
@@ -113,9 +115,10 @@ export const MyStorySection = () => {
         <motion.button 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
+          onClick={() => setIsExpanded(!isExpanded)}
           className="text-black border border-black px-8 py-3 self-start hover:bg-black hover:text-white transition-all duration-300"
         >
-          Read More
+          {isExpanded ? 'Show Less' : 'Read More'}
         </motion.button>
       </motion.div>
       
@@ -133,9 +136,35 @@ export const MyStorySection = () => {
         <p className="text-white/80 leading-relaxed mb-4">
           my work and connects with you.
         </p>
-        <p className="text-white/80 leading-relaxed">
+        <p className="text-white/80 leading-relaxed mb-4">
           I create high-quality 3D renders and designs that will support your next digital visualization project.
         </p>
+        
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <div className="w-16 h-0.5 bg-white/30 my-6"></div>
+              <p className="text-white/80 leading-relaxed mb-4">
+                My journey in VFX started during my studies where I discovered my passion for creating immersive digital worlds. 
+                I specialize in 3D modeling, texturing, lighting, and animation using industry-standard software.
+              </p>
+              <p className="text-white/80 leading-relaxed mb-4">
+                Each project challenges me to push creative boundaries while maintaining technical excellence. 
+                I believe in the power of visual storytelling to create emotional connections and memorable experiences.
+              </p>
+              <p className="text-white/80 leading-relaxed">
+                Whether working on personal projects or collaborating with clients, I bring dedication, creativity, 
+                and technical expertise to every frame.
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </motion.div>
     </section>
   );
