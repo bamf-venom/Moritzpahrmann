@@ -522,6 +522,59 @@ export const AboutMeSection = () => {
       </div>
     </section>
   );
+
+// About Me Section Component
+export const AboutMeSection = () => {
+  return (
+    <section id="about" className="bg-gray-900 py-16 md:py-24">
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-5xl md:text-7xl font-light text-white mb-8">About Me</h2>
+          <div className="w-24 h-0.5 bg-white mx-auto mb-12"></div>
+        </motion.div>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="bg-gray-600 aspect-square rounded-lg mb-6"></div>
+            <p className="text-white/60 text-sm text-center">Professional VFX Artist Portrait</p>
+          </motion.div>
+          
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="space-y-6"
+          >
+            <h3 className="text-3xl font-light text-white mb-4">Moritz Pahrmann</h3>
+            <p className="text-white/80 leading-relaxed">
+              As a dedicated VFX artist currently studying at FH Vorarlberg, I am passionate about creating stunning visual experiences that captivate and inspire. My specialization in 3D Visual Effects combines technical expertise with creative vision.
+            </p>
+            <p className="text-white/80 leading-relaxed">
+              I have experience in various aspects of VFX production including 3D modeling, texturing, lighting, animation, and compositing. My work spans from architectural visualization to character animation and environmental design.
+            </p>
+            <div className="space-y-3">
+              <h4 className="text-xl text-white font-semibold">Education & Experience</h4>
+              <ul className="text-white/70 space-y-2">
+                <li>• 3D Visual Effects Student at FH Vorarlberg</li>
+                <li>• Freelance VFX Artist</li>
+                <li>• Specialized in Architectural Visualization</li>
+                <li>• Character Animation & Environmental Design</li>
+              </ul>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
+  );
 };
 
 // All Videos Section Component
