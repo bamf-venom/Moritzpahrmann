@@ -1,2 +1,0 @@
-# Moritz Pahrmann
-VFX Artist
