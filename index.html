@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Moritz Pahrmann - VFX Artist</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="terminal-window">
+            
+            <!-- Terminal Header -->
+            <div class="terminal-header">
+                <div class="terminal-controls">
+                    <span class="control-btn close"></span>
+                    <span class="control-btn minimize"></span>
+                    <span class="control-btn maximize"></span>
+                </div>
+                <div class="terminal-title">Terminal — moritz@vfx-portfolio</div>
+            </div>
+
+            <!-- Terminal Content -->
+            <div class="terminal-content">
+                
+                <!-- ASCII Art Section -->
+                <div class="ascii-section">
+                    <div class="ascii-container">
+                        <!-- Desktop ASCII Art -->
+                        <pre class="ascii-art" id="asciiArt"></pre>
+                        
+                        <!-- Mobile Simplified Version -->
+                        <div class="ascii-mobile">
+                            <span class="vfx-text">MORITZ PAHRMANN</span>
+                            <span class="name-text">VFX ARTIST</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Command Line Prompt -->
+                <div class="command-line">
+                    <span class="prompt">moritz@vfx-portfolio:~$</span>
+                    <span class="typing-text" id="typingText"></span>
+                    <span class="cursor">█</span>
+                </div>
+
+                <!-- Info Section -->
+                <div class="info-section">
+                    <div class="info-line">
+                        <span class="label">Name:</span>
+                        <span class="value">Moritz Pahrmann</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="label">Role:</span>
+                        <span class="value">VFX Artist</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="label">Status:</span>
+                        <span class="value status-active">● Coming Soon</span>
+                    </div>
+                    <div class="info-line">
+                        <span class="label">Launch:</span>
+                        <span class="value">07.07.2025</span>
+                    </div>
+                </div>
+
+                <!-- Countdown Section -->
+                <div class="countdown-section">
+                    <div class="section-header">
+                        <span>Portfolio Launch Countdown:</span>
+                    </div>
+                    
+                    <div class="countdown-grid">
+                        <div class="time-block">
+                            <div class="time-value" id="days">000</div>
+                            <div class="time-unit">days</div>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-block">
+                            <div class="time-value" id="hours">00</div>
+                            <div class="time-unit">hrs</div>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-block">
+                            <div class="time-value" id="minutes">00</div>
+                            <div class="time-unit">min</div>
+                        </div>
+                        <div class="separator">:</div>
+                        <div class="time-block">
+                            <div class="time-value" id="seconds">00</div>
+                            <div class="time-unit">sec</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Progress Bar -->
+                <div class="progress-section">
+                    <div class="progress-label">System Initialization Progress:</div>
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                    </div>
+                    <div class="progress-text">[████████████████████████████████████████] 87%</div>
+                </div>
+
+                <!-- Social Media Links Section -->
+                <div class="social-section">
+                    <div class="section-header">
+                        <span>Social Links:</span>
+                    </div>
+                    <div class="social-links">
+                        <div class="social-line">
+                            <span class="label">Instagram:</span>
+                            <a 
+                                href="https://instagram.com/moritzpahrmann" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-value"
+                            >
+                                @moritzpahrmann
+                            </a>
+                        </div>
+                        <div class="social-line">
+                            <span class="label">Artstation:</span>
+                            <a 
+                                href="https://artstation.com/moritzpahrmann" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="social-value"
+                            >
+                                moritzpahrmann
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="footer-section">
+                    <div class="footer-line" id="lastLogin">Last login: Loading... on ttys001</div>
+                    <div class="footer-line">Type 'help' for available commands.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
